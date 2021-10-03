@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.lotto.databinding.ActivityMainBinding;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateLotto() {
         List<Integer> arr = makeNewLotto();
-        binding.textNum1.setText(arr.get(0).toString());
-        binding.textNum2.setText(arr.get(1).toString());
-        binding.textNum3.setText(arr.get(2).toString());
-        binding.textNum4.setText(arr.get(3).toString());
-        binding.textNum5.setText(arr.get(4).toString());
-        binding.textNum6.setText(arr.get(5).toString());
+        binding.textView.setText(arr.get(0).toString());
+        binding.textView7.setText(arr.get(1).toString());
+        binding.textView3.setText(arr.get(2).toString());
+        binding.textView4.setText(arr.get(3).toString());
+        binding.textView5.setText(arr.get(4).toString());
+        binding.textView6.setText(arr.get(5).toString());
     }
 
     private List<Integer> makeNewLotto() {
@@ -48,5 +50,8 @@ public class MainActivity extends AppCompatActivity {
         }
         Collections.sort(array);
         return array;
+    }
+
+    private class Button {
     }
 }
